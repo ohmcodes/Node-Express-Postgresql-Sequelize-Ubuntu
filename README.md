@@ -73,6 +73,13 @@ npx sequelize-cli db:seed:all
 npx sequelize-cli migration:generate --name addPassword
 ```
 
+## Sample .env
+```
+PORT=3000
+DB_HOST='127.0.0.1'
+DB_USERNAME='postgres'
+DB_PASSWORD='postgres'
+```
 
 
 
