@@ -33,13 +33,23 @@ git clone https://github.com/ohmcodes/NodeJS-ExpressJS-PostgreSQL-Sequelize-Ubun
 ## Install NPM
 ```
 sudo apt install npm
+
+npm init
 ```
 
 ## Install ExpressJS,Node-Postgres, Nodemon, dotenv, Sequelize
 ```
-npm i express pg pg-hstore dotenv sequelize
-npm i nodemon -D
-npm i sequelize-cli -D
+npm i express pg pg-hstore dotenv sequelize --save
+npm i nodemon -D --save
+npm i sequelize-cli -D --save
+```
+
+## Sample .env
+```
+PORT=3000
+DB_HOST='127.0.0.1'
+DB_USERNAME='postgres'
+DB_PASSWORD='postgres'
 ```
 
 ## Run Server
@@ -73,13 +83,7 @@ npx sequelize-cli db:seed:all
 npx sequelize-cli migration:generate --name addPassword
 ```
 
-## Sample .env
-```
-PORT=3000
-DB_HOST='127.0.0.1'
-DB_USERNAME='postgres'
-DB_PASSWORD='postgres'
-```
+
 
 
 
