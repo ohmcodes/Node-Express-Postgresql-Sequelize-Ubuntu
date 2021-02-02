@@ -45,7 +45,8 @@ npm i sequelize-cli -D --save
 
 
 Add in package.json scripts
-"dev": "nodemon -r dotenv/config app.js"
+"dev": "nodemon -r dotenv/config app.js",
+"db:create": "sequelize-cli db:create"
 ```
 
 
