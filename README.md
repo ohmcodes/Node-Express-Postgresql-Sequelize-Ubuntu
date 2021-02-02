@@ -85,12 +85,56 @@ npx sequelize-cli db:migrate
 
 ## Running seed, Insert Data
 ```
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    return await queryInterface.bulkInsert(
+    "Users",
+      [
+        {
+          firstName: "Bob",
+          lastName: "Marley",
+          email: "bobmarley@gmail.com",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
+      ],
+      {}
+    );
+
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    return await queryInterface.bulkDelete("Users", null, {});
+  }
+};
+
+
+INIT INSERT
 npx sequelize-cli db:seed:all
 ```
 
 ## Updating Model
 ```
+INIT UPDATE MODEL
 npx sequelize-cli migration:generate --name addPassword
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.addColumn(
+      "Users",
+      "password",
+      {
+        type: Sequelize.DataTypes.STRING
+      }
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn("Users", "password");
+  }
+};
+
+RUN MIGRATE
+npx sequelize-cli db:migrate
 ```
 
 
