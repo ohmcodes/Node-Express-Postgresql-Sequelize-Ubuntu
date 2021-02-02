@@ -42,7 +42,12 @@ npm init
 npm i express pg pg-hstore dotenv sequelize --save
 npm i nodemon -D --save
 npm i sequelize-cli -D --save
+
+
+Add in package.json scripts
+"dev": "nodemon -r dotenv/config app.js"
 ```
+
 
 ## Sample .env
 ```
