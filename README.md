@@ -83,6 +83,11 @@ npx sequelize-cli model:generate --name User --attributes firstName:string,lastN
 npx sequelize-cli db:migrate
 ```
 
+## Generate seed
+```
+npx sequelize-cli seed:generate --name <name>
+```
+
 ## Running seed, Insert Data
 ```
 module.exports = {
